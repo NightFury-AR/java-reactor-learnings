@@ -29,7 +29,7 @@ public class C05_SubsPubsOn {
                 .subscribeOn(Schedulers.boundedElastic())
                 .publishOn(Schedulers.boundedElastic())
                 .map(C05_SubsPubsOn::toLowerCase)
-                //.subscribeOn(Schedulers.boundedElastic())
+                .subscribeOn(Schedulers.boundedElastic())
                 .subscribeWith(new CustomSubscriber("c"));
         SubscriberUtil.freeze(5);
     }
